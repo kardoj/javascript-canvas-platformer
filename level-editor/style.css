@@ -1,0 +1,60 @@
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#shooter-container {
+}
+
+#control-panel {
+	position: absolute;
+	vertical-align: top;
+	z-index: 2;
+	width: 20%;
+	top: 0px;
+	left: 0px;
+	border-radius: 0px 0px 5px 5px;
+}
+
+#control-panel #dragbox {
+	background-color: #0000ff;
+	border-radius: 5px 5px 0px 0px;
+	padding: 3px;
+	color: #fff;
+	cursor: move;
+	font-weight: bold;
+}
+
+#control-panel .panel {	
+	padding: 10px;
+	background-color: rgba(255, 255, 255, .8);
+}
+
+#control-panel #toggle-control-panel {
+	font-weight: bold;
+	float: right;
+	cursor: pointer;
+}
+
+.coordinate {
+	font-size: 1.5em;
+	font-weight: 500;
+}
+
+.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.add-subtract-pixels {
+	padding: 3px;
+}

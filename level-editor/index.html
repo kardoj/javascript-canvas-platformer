@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shooter level editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<canvas id="shooter-container"></canvas>
+	<div id="control-panel">
+		<div id="dragbox">Control panel <span id="toggle-control-panel">-</span></div>
+		<div id="panels-container">
+			<div class="panel">
+				Select sprite <br>
+				<img src="../assets/sprites/ground-rock-32x32.png" class="sprite-select" alt="ground-rock-32x32">
+				<img src="../assets/sprites/ground-rock-left-edge-32x32.png" class="sprite-select" alt="ground-rock-32x32">
+				<img src="../assets/sprites/ground-rock-right-edge-32x32.png" class="sprite-select" alt="ground-rock-32x32">
+			</div>
+			<div class="panel">
+				Currently selected <br>
+				<img id="currently-selected-sprite-image" src="../assets/sprites/ground-rock-32x32.png" alt="ground-rock-32x32">
+			</div>
+			<div class="panel">
+				Mouse coordinates <br>
+				x: <span id="x-coordinate-container" class="coordinate">-</span> 
+				y: <span id="y-coordinate-container" class="coordinate">-</span>
+			</div>
+			<div class="panel">
+				Insert by coordinate <br>
+				x: <input type="number" id="x-coordinate-input" value="0">
+				<a class="add-subtract-pixels" href="#" onclick="changeInsertCoordinates('x', -32);">-32</a>
+				<a class="add-subtract-pixels" href="#" onclick="changeInsertCoordinates('x', 32);">+32</a><br>
+				y: <input type="number" id="y-coordinate-input" value="0">
+				<a class="add-subtract-pixels" href="#" onclick="changeInsertCoordinates('y', -32);">-32</a>
+				<a class="add-subtract-pixels" href="#" onclick="changeInsertCoordinates('y', 32);">+32</a><br>
+				<button id="insert-by-coordinate-button">Insert</button>
+			</div>
+		</div>
+	</div>
+	<script src="../world-object.js"></script>
+	<script src="level-editor.js"></script>
+</body>
+</html>
